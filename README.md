@@ -9,7 +9,7 @@ This is our shared [Webpack](http://webpack.github.io) config used for front-end
 Install this package and Webpack via NPM:
 
 ```
-npm install webpack @ciro-maciel/webpack-config --save-dev
+npm install @ciro-maciel/webpack-config --save-dev
 ```
 
 Add some scripts to your `package.json`:
@@ -29,7 +29,6 @@ Create a `webpack.config.js` in your project directory, and set it up like so:
 ```js
 // webpack.config.js
 
-var webpack = require("webpack");
 var configure = require("@ciro-maciel/webpack-config");
 
 module.exports = configure({
@@ -38,7 +37,7 @@ module.exports = configure({
     // ./src/app.js ==> ./dist/app-[hash].js
     app: "./src/app.js",
   },
-
+  __dirname,
   // Override any other Webpack settings here!
   // see: https://webpack.js.org/configuration/
 });
@@ -48,6 +47,4 @@ Now you can run `npm start` to build with source maps and watch for changes, and
 
 ### License
 
-&copy; ciro-maciel.me. Our Webpack config is free software, and may be redistributed under the
-terms specified in the [LICENSE](https://github.com/ciro-maciel/webpack-config/blob/main/LICENSE) file. The
-name and logo for ciro-maciel.me are trademarks of Ciro Cesar Maciel and may not be used without permission.
+&copy; ciro-maciel.me. Our Webpack config is free software, and may be redistributed under the terms specified in the [LICENSE](https://github.com/ciro-maciel/webpack-config/blob/main/LICENSE) file. The name and logo for ciro-maciel.me are trademarks of Ciro Cesar Maciel and may not be used without permission.
