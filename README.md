@@ -1,4 +1,4 @@
-## ciro-maciel - webpack-config
+## ciro-maciel - webpack-config [![deploy to Prod](https://github.com/ciro-maciel/webpack-config/actions/workflows/toProd.yml/badge.svg)](https://github.com/ciro-maciel/webpack-config/actions/workflows/toProd.yml)
 
 webpack configuration for development Applications
 
