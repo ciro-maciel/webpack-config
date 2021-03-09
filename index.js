@@ -12,12 +12,12 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
-const baseConfig = {
+const baseConfig = (dirPath) => ({
   // https://webpack.js.org/configuration/devtool/
   devtool: "source-map",
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "../www", "assets/js/"),
+    path: path.resolve(dirPath, "../www", "assets/js/"),
     filename: "[contenthash:12].js",
     chunkFilename: "[chunkhash:12].js",
   },
@@ -106,16 +106,16 @@ const baseConfig = {
   // https://webpack.js.org/configuration/resolve/#resolvealias
   resolve: {
     alias: {
-      components: path.resolve(__dirname, "../src/components/index.js"),
-      containers: path.resolve(__dirname, "../src/containers/index.js"),
-      providers: path.resolve(__dirname, "../src/providers/index.js"),
-      hooks: path.resolve(__dirname, "../src/hooks/index.js"),
-      utils: path.resolve(__dirname, "../src/utils/index.js"),
+      components: path.resolve(dirPath, "../src/components/index.js"),
+      containers: path.resolve(dirPath, "../src/containers/index.js"),
+      providers: path.resolve(dirPath, "../src/providers/index.js"),
+      hooks: path.resolve(dirPath, "../src/hooks/index.js"),
+      utils: path.resolve(dirPath, "../src/utils/index.js"),
     },
   },
-};
+});
 
-const prodConfig = {
+const prodConfig = (dirPath) => ({
   mode: "production",
   output: {
     publicPath: "assets/js/",
@@ -123,9 +123,7 @@ const prodConfig = {
   plugins: [
     new CleanWebpackPlugin({
       verbose: true,
-      cleanOnceBeforeBuildPatterns: [
-        path.join(__dirname, "../www/assets/**/*"),
-      ],
+      cleanOnceBeforeBuildPatterns: [path.join(dirPath, "../www/assets/**/*")],
     }),
     new HtmlWebpackPlugin({
       template: "src/index.html",
@@ -142,7 +140,7 @@ const prodConfig = {
       },
     }),
     new Dotenv({
-      path: path.join(__dirname, `/.env.prod`),
+      path: path.join(dirPath, `/.env.prod`),
       safe: true,
       systemvars: true,
     }),
@@ -158,9 +156,9 @@ const prodConfig = {
       reportFilename: "../../analyzer.html",
     }),
   ],
-};
+});
 
-const devConfig = {
+const devConfig = (dirPath) => ({
   mode: "development",
   output: {
     publicPath: "/",
@@ -181,13 +179,13 @@ const devConfig = {
       },
     }),
     new Dotenv({
-      path: path.join(__dirname, `/.env.dev`),
+      path: path.join(dirPath, `/.env.dev`),
       safe: true,
       systemvars: true,
     }),
   ],
   devServer: {
-    contentBase: path.join(__dirname, "../../../www/"),
+    contentBase: path.join(dirPath, "../../../www/"),
     index: "index.html",
     compress: true,
     open: true,
@@ -195,7 +193,11 @@ const devConfig = {
     hot: true,
     historyApiFallback: true,
   },
-};
+});
 
-module.exports = (options = {}) => (env) =>
-  merge(baseConfig, env.dev ? devConfig : prodConfig, options);
+module.exports = (options = {}, dirPath) => (env) =>
+  merge(
+    baseConfig(dirPath),
+    env.dev ? devConfig(dirPath) : prodConfig(dirPath),
+    options
+  );
