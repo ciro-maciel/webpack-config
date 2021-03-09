@@ -27,9 +27,7 @@ Add some scripts to your `package.json`:
 Create a `webpack.config.js` in your project directory, and set it up like so:
 
 ```js
-// webpack.config.js
-
-var configure = require("@ciro-maciel/webpack-config");
+const configure = require("@ciro-maciel/webpack-config");
 
 module.exports = configure({
   entry: {
