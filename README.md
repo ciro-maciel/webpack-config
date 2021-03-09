@@ -2,7 +2,6 @@
 
 webpack configuration for development Applications
 
-
 This is our shared [Webpack](http://webpack.github.io) config used for front-end projects at ciro-maciel.me. It compiles JavaScript with [Babel](https://babeljs.io). It is also configured to add hashes to filenames for easy caching.
 
 ### Getting Started
@@ -19,9 +18,8 @@ Add some scripts to your `package.json`:
 {
   // ...
   "scripts": {
-    "start": "webpack --env=development --hide-modules --watch",
-    "build:dev": "webpack --env=development --hide-modules",
-    "build": "webpack --env=production",
+    "start": "webpack --env=dev",
+    "build": "webpack --env=prod",
   }
 }
 ```
@@ -31,14 +29,14 @@ Create a `webpack.config.js` in your project directory, and set it up like so:
 ```js
 // webpack.config.js
 
-var webpack = require('webpack');
-var configure = require('@ciro-maciel/webpack-config');
+var webpack = require("webpack");
+var configure = require("@ciro-maciel/webpack-config");
 
 module.exports = configure({
   entry: {
     // Add your bundles here, so in this case
     // ./src/app.js ==> ./dist/app-[hash].js
-    app: './src/app.js',
+    app: "./src/app.js",
   },
 
   // Override any other Webpack settings here!
