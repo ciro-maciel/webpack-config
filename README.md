@@ -51,5 +51,5 @@ Now you can run `npm start` to build with source maps and watch for changes, and
 ### License
 
 &copy; ciro-maciel.me. Our Webpack config is free software, and may be redistributed under the
-terms specified in the [LICENSE]() file. The
+terms specified in the [LICENSE](https://github.com/ciro-maciel/webpack-config/blob/main/LICENSE) file. The
 name and logo for ciro-maciel.me are trademarks of Ciro Cesar Maciel and may not be used without permission.
