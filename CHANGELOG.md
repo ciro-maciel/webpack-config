@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/ciro-maciel/webpack-config/compare/v1.0.0...v1.0.1) (2021-03-09)
+
+
+### Bug Fixes
+
+* relative dirPath ([7c1be69](https://github.com/ciro-maciel/webpack-config/commit/7c1be69a2495729d8733559cd2d6b17940c6235c))
+
 # 1.0.0 (2021-03-09)
 
 
