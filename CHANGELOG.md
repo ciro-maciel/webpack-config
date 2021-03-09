@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/ciro-maciel/webpack-config/compare/v1.0.1...v1.0.2) (2021-03-09)
+
+
+### Bug Fixes
+
+* dependency ([e655b2e](https://github.com/ciro-maciel/webpack-config/commit/e655b2ef14827a66f7450e56ae5c45c766565881))
+
 ## [1.0.1](https://github.com/ciro-maciel/webpack-config/compare/v1.0.0...v1.0.1) (2021-03-09)
 
 
