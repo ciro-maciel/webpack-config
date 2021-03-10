@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/ciro-maciel/webpack-config/compare/v1.4.1...v1.5.0) (2021-03-10)
+
+
+### Features
+
+* **asset:** using webpack ([d114cf7](https://github.com/ciro-maciel/webpack-config/commit/d114cf76d7511e5305539ae822d709c582e235a0))
+
 ## [1.4.1](https://github.com/ciro-maciel/webpack-config/compare/v1.4.0...v1.4.1) (2021-03-10)
 
 
