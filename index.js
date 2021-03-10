@@ -143,9 +143,9 @@ const prodConfig = (dirPath) => ({
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: "assets/css/",
-            },
+            // options: {
+            //   publicPath: "assets/css/",
+            // },
           },
         ],
       },
