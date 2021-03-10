@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/ciro-maciel/webpack-config/compare/v1.5.0...v1.5.1) (2021-03-10)
+
+
+### Bug Fixes
+
+* images path ([3863025](https://github.com/ciro-maciel/webpack-config/commit/386302547f7ea9c9572abd2716f9f63f4a21a79e))
+
 # [1.5.0](https://github.com/ciro-maciel/webpack-config/compare/v1.4.1...v1.5.0) (2021-03-10)
 
 
