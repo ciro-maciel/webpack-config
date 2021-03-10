@@ -140,14 +140,19 @@ const prodConfig = (dirPath) => ({
     rules: [
       {
         test: /\.less$/i,
-        use: [MiniCssExtractPlugin.loader],
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: "assets/css/",
+            },
+          },
+        ],
       },
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      publicPath: "assets/css/",
-    }),
+    new MiniCssExtractPlugin(),
     new CleanWebpackPlugin({
       verbose: true,
       cleanOnceBeforeBuildPatterns: [path.join(dirPath, "../www/assets/**/*")],
