@@ -67,6 +67,10 @@ const baseConfig = (dirPath) => ({
         },
       },
       {
+        test: /\.less$/i,
+        loader: "less-loader",
+      },
+      {
         test: /\.(png|jp(e*)g|svg|md)$/,
         use: [
           {
@@ -78,7 +82,7 @@ const baseConfig = (dirPath) => ({
               severityError: "warning",
               minimizerOptions: {
                 plugins: [
-                  ["optipng", { optimizationLevel: 5 }],
+                  ["optipng", { optimizationLevel: 3 }],
                   [
                     "svgo",
                     {

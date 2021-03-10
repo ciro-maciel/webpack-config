@@ -51,6 +51,8 @@
     "image-minimizer-webpack-plugin": "^2.2.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^9.0.0",
+    "less": "^4.1.1",
+    "less-loader": "^8.0.0",
     "prettier": "^2.2.1",
     "progress-bar-webpack-plugin": "^2.1.0",
     "style-loader": "^2.0.0",
