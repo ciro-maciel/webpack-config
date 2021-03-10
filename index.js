@@ -114,6 +114,7 @@ const baseConfig = (dirPath) => ({
     ],
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /pt-br/),
     new ProgressBarPlugin({
       format: "Build [:bar] :percent (:elapsed seconds)",
