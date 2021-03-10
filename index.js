@@ -70,12 +70,7 @@ const baseConfig = (dirPath) => ({
       {
         test: /\.less$/i,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            // options: {
-            //   publicPath: "../",
-            // },
-          },
+          MiniCssExtractPlugin.loader,
           "css-loader",
           {
             loader: "less-loader",
@@ -89,32 +84,7 @@ const baseConfig = (dirPath) => ({
       },
       {
         test: /\.(png|jp(e*)g|svg|md)$/,
-        use: [
-          {
-            loader: "url-loader",
-          },
-          {
-            loader: ImageMinimizerPlugin.loader,
-            options: {
-              severityError: "warning",
-              minimizerOptions: {
-                plugins: [
-                  ["optipng", { optimizationLevel: 3 }],
-                  [
-                    "svgo",
-                    {
-                      plugins: [
-                        {
-                          removeViewBox: false,
-                        },
-                      ],
-                    },
-                  ],
-                ],
-              },
-            },
-          },
-        ],
+        type: "asset/resource",
       },
     ],
   },
