@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/ciro-maciel/webpack-config/compare/v1.2.0...v1.2.1) (2021-03-10)
+
+
+### Bug Fixes
+
+* javascriptEnabled ([db1521a](https://github.com/ciro-maciel/webpack-config/commit/db1521a9d0247d175ff4063a4be335af9ee0e4ab))
+
 # [1.2.0](https://github.com/ciro-maciel/webpack-config/compare/v1.1.0...v1.2.0) (2021-03-10)
 
 
