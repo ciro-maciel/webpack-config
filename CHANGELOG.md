@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/ciro-maciel/webpack-config/compare/v1.4.0...v1.4.1) (2021-03-10)
+
+
+### Bug Fixes
+
+* resource ([3486b7b](https://github.com/ciro-maciel/webpack-config/commit/3486b7b118e46b5f398e721346be4af4fb9172cd))
+
 # [1.4.0](https://github.com/ciro-maciel/webpack-config/compare/v1.3.11...v1.4.0) (2021-03-10)
 
 
