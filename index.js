@@ -142,7 +142,7 @@ const prodConfig = (dirPath) => ({
       systemvars: true,
     }),
     new CopyPlugin({
-      patterns: [{ from: "src/assets/img/", to: "../img/" }],
+      patterns: [{ from: "src/assets/img/", to: "img/" }],
     }),
     new CompressionPlugin({
       test: /\.js$/,
