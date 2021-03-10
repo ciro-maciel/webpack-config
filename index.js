@@ -70,6 +70,12 @@ const baseConfig = (dirPath) => ({
       {
         test: /\.less$/i,
         use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: "assets/css/",
+            },
+          },
           "css-loader",
           {
             loader: "less-loader",
@@ -113,6 +119,7 @@ const baseConfig = (dirPath) => ({
     ],
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /pt-br/),
     new ProgressBarPlugin({
       format: "Build [:bar] :percent (:elapsed seconds)",
@@ -136,23 +143,7 @@ const prodConfig = (dirPath) => ({
   output: {
     publicPath: "assets/js/",
   },
-  module: {
-    rules: [
-      {
-        test: /\.less$/i,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            // options: {
-            //   publicPath: "assets/css/",
-            // },
-          },
-        ],
-      },
-    ],
-  },
   plugins: [
-    new MiniCssExtractPlugin(),
     new CleanWebpackPlugin({
       verbose: true,
       cleanOnceBeforeBuildPatterns: [path.join(dirPath, "../www/assets/**/*")],
