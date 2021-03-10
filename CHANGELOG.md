@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/ciro-maciel/webpack-config/compare/v1.2.7...v1.3.0) (2021-03-10)
+
+
+### Features
+
+* mini-css-extract-plugin ([a3e73fc](https://github.com/ciro-maciel/webpack-config/commit/a3e73fc0dd628e843edd5eec42cf7cb4069c78e1))
+
 ## [1.2.7](https://github.com/ciro-maciel/webpack-config/compare/v1.2.6...v1.2.7) (2021-03-10)
 
 
