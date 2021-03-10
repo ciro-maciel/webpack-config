@@ -1,3 +1,10 @@
+## [1.2.7](https://github.com/ciro-maciel/webpack-config/compare/v1.2.6...v1.2.7) (2021-03-10)
+
+
+### Bug Fixes
+
+* loader: "less-loader" ([7a993cd](https://github.com/ciro-maciel/webpack-config/commit/7a993cdf88e068c34525dcc178d555f9e0c41682))
+
 ## [1.2.6](https://github.com/ciro-maciel/webpack-config/compare/v1.2.5...v1.2.6) (2021-03-10)
 
 
