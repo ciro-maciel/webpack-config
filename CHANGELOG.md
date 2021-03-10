@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/ciro-maciel/webpack-config/compare/v1.3.1...v1.3.2) (2021-03-10)
+
+
+### Bug Fixes
+
+* prodConfig ([e374de8](https://github.com/ciro-maciel/webpack-config/commit/e374de8ae5d83e4dcbc6b7481515d61e6c78b3d6))
+
 ## [1.3.1](https://github.com/ciro-maciel/webpack-config/compare/v1.3.0...v1.3.1) (2021-03-10)
 
 
