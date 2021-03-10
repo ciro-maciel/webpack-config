@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/ciro-maciel/webpack-config/compare/v1.2.4...v1.2.5) (2021-03-10)
+
+
+### Bug Fixes
+
+* less ([efab658](https://github.com/ciro-maciel/webpack-config/commit/efab6583442be260edf4a76b7f2f144020d58d67))
+
 ## [1.2.4](https://github.com/ciro-maciel/webpack-config/compare/v1.2.3...v1.2.4) (2021-03-10)
 
 
