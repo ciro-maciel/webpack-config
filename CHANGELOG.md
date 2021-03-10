@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/ciro-maciel/webpack-config/compare/v1.3.0...v1.3.1) (2021-03-10)
+
+
+### Bug Fixes
+
+* MiniCssExtractPlugin ([bc60011](https://github.com/ciro-maciel/webpack-config/commit/bc600112d650e33c45f5f949aefc388fc7c7efb6))
+
 # [1.3.0](https://github.com/ciro-maciel/webpack-config/compare/v1.2.7...v1.3.0) (2021-03-10)
 
 
