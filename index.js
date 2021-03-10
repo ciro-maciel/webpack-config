@@ -18,9 +18,9 @@ const baseConfig = (dirPath) => ({
   devtool: "source-map",
   entry: "./src/index.js",
   output: {
-    path: path.resolve(dirPath, "../www", "assets/js/"),
-    filename: "[contenthash:12].js",
-    chunkFilename: "[chunkhash:12].js",
+    path: path.resolve(dirPath, "../www", "assets/"),
+    filename: "js/[contenthash:12].js",
+    chunkFilename: "js/[chunkhash:12].js",
   },
   performance: { hints: false },
   optimization: {
@@ -72,9 +72,9 @@ const baseConfig = (dirPath) => ({
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: "../",
-            },
+            // options: {
+            //   publicPath: "../",
+            // },
           },
           "css-loader",
           {
@@ -152,7 +152,7 @@ const prodConfig = (dirPath) => ({
     }),
     new HtmlWebpackPlugin({
       template: "src/index.html",
-      filename: "../../index.html",
+      filename: "../index.html",
       showErrors: true,
       chunksSortMode: "auto",
       minify: {
@@ -178,7 +178,7 @@ const prodConfig = (dirPath) => ({
     new BundleAnalyzerPlugin({
       analyzerMode: "static",
       openAnalyzer: false,
-      reportFilename: "../../analyzer.html",
+      reportFilename: "../analyzer.html",
     }),
   ],
 });
