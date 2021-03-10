@@ -69,8 +69,10 @@ const baseConfig = (dirPath) => ({
       {
         test: /\.less$/i,
         loader: "less-loader",
-        lessOptions: {
-          javascriptEnabled: true,
+        options: {
+          lessOptions: {
+            javascriptEnabled: true,
+          },
         },
       },
       {
