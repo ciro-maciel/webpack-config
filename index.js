@@ -59,15 +59,6 @@ const baseConfig = (dirPath) => ({
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
-        use: {
-          loader: "url-loader",
-          options: {
-            limit: 50000,
-          },
-        },
-      },
-      {
         test: /\.less$/i,
         use: [
           MiniCssExtractPlugin.loader,
@@ -81,6 +72,10 @@ const baseConfig = (dirPath) => ({
             },
           },
         ],
+      },
+      {
+        test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+        type: "asset/resource",
       },
       {
         test: /\.(png|jp(e*)g|svg|md)$/,
