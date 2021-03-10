@@ -73,7 +73,7 @@ const baseConfig = (dirPath) => ({
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: "../assets/css/",
+              publicPath: path.resolve(dirPath, "../www", "assets/css/"),
             },
           },
           "css-loader",
