@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/ciro-maciel/webpack-config/compare/v1.0.2...v1.1.0) (2021-03-10)
+
+
+### Features
+
+* sideEffects ([246b7ae](https://github.com/ciro-maciel/webpack-config/commit/246b7ae82625dbbc8b9646a2eab6489307010f46))
+
 ## [1.0.2](https://github.com/ciro-maciel/webpack-config/compare/v1.0.1...v1.0.2) (2021-03-09)
 
 
