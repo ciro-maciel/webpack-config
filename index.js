@@ -3,6 +3,7 @@ const webpack = require("webpack");
 const Dotenv = require("dotenv-webpack");
 const { merge } = require("webpack-merge");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ProgressBarPlugin = require("progress-bar-webpack-plugin");
 
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
@@ -69,6 +70,7 @@ const baseConfig = (dirPath) => ({
       {
         test: /\.less$/i,
         use: [
+          MiniCssExtractPlugin.loader,
           "css-loader",
           {
             loader: "less-loader",
