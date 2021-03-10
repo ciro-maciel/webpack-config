@@ -23,6 +23,7 @@ const baseConfig = (dirPath) => ({
   },
   performance: { hints: false },
   optimization: {
+    sideEffects: true,
     // https://webpack.js.org/plugins/split-chunks-plugin/
     splitChunks: {
       chunks: "all",
