@@ -5,9 +5,6 @@ const { merge } = require("webpack-merge");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ProgressBarPlugin = require("progress-bar-webpack-plugin");
-
-const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-
 const CopyPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
@@ -76,10 +73,23 @@ const baseConfig = (dirPath) => ({
       {
         test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
         type: "asset/resource",
+        generator: {
+          filename: "font/[hash][ext][query]",
+        },
       },
       {
-        test: /\.(png|jp(e*)g|svg|md)$/,
+        test: /\.(jp(e*)g|svg)$/,
         type: "asset/resource",
+        generator: {
+          filename: "img/[hash][ext][query]",
+        },
+      },
+      {
+        test: /\.(md)$/,
+        type: "asset/resource",
+        generator: {
+          filename: "[hash][ext][query]",
+        },
       },
     ],
   },
@@ -88,10 +98,7 @@ const baseConfig = (dirPath) => ({
       filename: "css/[name].css",
     }),
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /pt-br/),
-    new ProgressBarPlugin({
-      format: "Build [:bar] :percent (:elapsed seconds)",
-      clear: false,
-    }),
+    new ProgressBarPlugin({ percentBy: "entries" }),
   ],
   // https://webpack.js.org/configuration/resolve/#resolvealias
   resolve: {
