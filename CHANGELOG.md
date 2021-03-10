@@ -1,3 +1,10 @@
+## [1.3.9](https://github.com/ciro-maciel/webpack-config/compare/v1.3.8...v1.3.9) (2021-03-10)
+
+
+### Bug Fixes
+
+* filename: path.resolve ([c339fc3](https://github.com/ciro-maciel/webpack-config/commit/c339fc314b546ad3f94905758b512cf7fadde8d8))
+
 ## [1.3.8](https://github.com/ciro-maciel/webpack-config/compare/v1.3.7...v1.3.8) (2021-03-10)
 
 
