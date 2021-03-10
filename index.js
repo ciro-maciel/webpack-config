@@ -115,7 +115,7 @@ const baseConfig = (dirPath) => ({
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "../css/[name].css",
+      filename: path.resolve(dirPath, "../www", "assets/css/[name].css"),
     }),
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /pt-br/),
     new ProgressBarPlugin({
