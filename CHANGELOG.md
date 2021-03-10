@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/ciro-maciel/webpack-config/compare/v1.1.0...v1.2.0) (2021-03-10)
+
+
+### Features
+
+* **style:** add less process ([bd79a0c](https://github.com/ciro-maciel/webpack-config/commit/bd79a0c48e646e91eed5d9e46c9b57a36be87f9d))
+
 # [1.1.0](https://github.com/ciro-maciel/webpack-config/compare/v1.0.2...v1.1.0) (2021-03-10)
 
 
