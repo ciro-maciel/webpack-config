@@ -70,12 +70,7 @@ const baseConfig = (dirPath) => ({
       {
         test: /\.less$/i,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: path.resolve(dirPath, "../www", "assets/css/"),
-            },
-          },
+          MiniCssExtractPlugin.loader,
           "css-loader",
           {
             loader: "less-loader",
@@ -119,7 +114,9 @@ const baseConfig = (dirPath) => ({
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: "../css/[name].css",
+    }),
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /pt-br/),
     new ProgressBarPlugin({
       format: "Build [:bar] :percent (:elapsed seconds)",
