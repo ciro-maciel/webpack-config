@@ -43,7 +43,7 @@ module.exports = configure({
 
 Now you can run `npm start` to build with source maps and watch for changes, and `npm run build` to build optimized assets for production! If you need to further customize your build, you can pass any overrides in to the configure function.
 
-[](./docs/Screen Shot 2021-03-11 at 11.03.30@2x.jpg)
+[base project](https://github.com/ciro-maciel/webpack-config/blob/main/docs/Screen%20Shot%202021-03-11%20at%2011.03.30%402x.jpg)
 
 ### License
 
