@@ -130,7 +130,6 @@ const prodConfig = (dirPath) => ({
     minimizer: [
       new TerserPlugin({
         parallel: 4,
-        sourceMap: false,
       }),
       new CssMinimizerPlugin({ parallel: 4, sourceMap: false }),
     ],
