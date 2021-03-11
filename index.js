@@ -5,7 +5,9 @@ const { merge } = require("webpack-merge");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ProgressBarPlugin = require("progress-bar-webpack-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
+// const CopyPlugin = require("copy-webpack-plugin");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
@@ -72,10 +74,7 @@ const baseConfig = (dirPath) => ({
       },
       {
         test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
-        type: "asset/resource",
-        generator: {
-          filename: "font/[hash][ext][query]",
-        },
+        type: "asset/inline",
       },
       {
         test: /\.(jp(e*)g|svg)$/,
@@ -94,6 +93,10 @@ const baseConfig = (dirPath) => ({
     ],
   },
   plugins: [
+    new FaviconsWebpackPlugin({
+      logo: "./src/assets/favicon.jpg",
+      outputPath: "/assets/img",
+    }),
     new MiniCssExtractPlugin({
       filename: "css/[name].css",
     }),
@@ -141,9 +144,9 @@ const prodConfig = (dirPath) => ({
       safe: true,
       systemvars: true,
     }),
-    new CopyPlugin({
-      patterns: [{ from: "src/assets/img/", to: "img/" }],
-    }),
+    // new CopyPlugin({
+    //   patterns: [{ from: "src/assets/img/", to: "img/" }],
+    // }),
     new CompressionPlugin({
       test: /\.js$/,
     }),
