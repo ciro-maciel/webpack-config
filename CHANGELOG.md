@@ -1,3 +1,10 @@
+## [1.6.3](https://github.com/ciro-maciel/webpack-config/compare/v1.6.2...v1.6.3) (2021-03-11)
+
+
+### Bug Fixes
+
+* asset/resource ([ac1dd7d](https://github.com/ciro-maciel/webpack-config/commit/ac1dd7dc03fbee71764d5b6c6be485d9077b5df3))
+
 ## [1.6.2](https://github.com/ciro-maciel/webpack-config/compare/v1.6.1...v1.6.2) (2021-03-11)
 
 
