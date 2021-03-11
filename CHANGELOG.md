@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/ciro-maciel/webpack-config/compare/v1.8.0...v1.8.1) (2021-03-11)
+
+
+### Bug Fixes
+
+* sourceMaps ([992f42c](https://github.com/ciro-maciel/webpack-config/commit/992f42cb86c972cadf829b8c9fd0e1fd20c2399a))
+
 # [1.8.0](https://github.com/ciro-maciel/webpack-config/compare/v1.7.1...v1.8.0) (2021-03-11)
 
 
