@@ -5,7 +5,6 @@ const { merge } = require("webpack-merge");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ProgressBarPlugin = require("progress-bar-webpack-plugin");
-// const CopyPlugin = require("copy-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
@@ -93,10 +92,6 @@ const baseConfig = (dirPath) => ({
     ],
   },
   plugins: [
-    new FaviconsWebpackPlugin({
-      logo: "./src/assets/favicon.jpg",
-      outputPath: "/assets/img",
-    }),
     new MiniCssExtractPlugin({
       filename: "css/[name].css",
     }),
@@ -121,6 +116,21 @@ const prodConfig = (dirPath) => ({
     publicPath: "assets/js/",
   },
   plugins: [
+    new FaviconsWebpackPlugin({
+      logo: "./src/assets/img/favicon.png",
+      publicPath: "/assets/",
+      prefix: "",
+      inject: true,
+      favicons: {
+        icons: {
+          appleStartup: false,
+          coast: false,
+          firefox: false,
+          windows: false,
+          yandex: false,
+        },
+      },
+    }),
     new CleanWebpackPlugin({
       verbose: true,
       cleanOnceBeforeBuildPatterns: [path.join(dirPath, "../www/assets/**/*")],
@@ -144,9 +154,6 @@ const prodConfig = (dirPath) => ({
       safe: true,
       systemvars: true,
     }),
-    // new CopyPlugin({
-    //   patterns: [{ from: "src/assets/img/", to: "img/" }],
-    // }),
     new CompressionPlugin({
       test: /\.js$/,
     }),
@@ -164,6 +171,21 @@ const devConfig = (dirPath) => ({
     publicPath: "/",
   },
   plugins: [
+    new FaviconsWebpackPlugin({
+      logo: "./src/assets/img/favicon.png",
+      publicPath: "/",
+      prefix: "",
+      inject: true,
+      favicons: {
+        icons: {
+          appleStartup: false,
+          coast: false,
+          firefox: false,
+          windows: false,
+          yandex: false,
+        },
+      },
+    }),
     new HtmlWebpackPlugin({
       template: "src/index.html",
       filename: "index.html",
