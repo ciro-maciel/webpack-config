@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/ciro-maciel/webpack-config/compare/v1.5.1...v1.6.0) (2021-03-11)
+
+
+### Features
+
+* FaviconsWebpackPlugin ([6f09281](https://github.com/ciro-maciel/webpack-config/commit/6f09281bab1b2ac064386f3e5b3025049d3b3276))
+
 ## [1.5.1](https://github.com/ciro-maciel/webpack-config/compare/v1.5.0...v1.5.1) (2021-03-10)
 
 
