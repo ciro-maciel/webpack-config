@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/ciro-maciel/webpack-config/compare/v1.7.0...v1.7.1) (2021-03-11)
+
+
+### Bug Fixes
+
+* css performance ([68a2f4d](https://github.com/ciro-maciel/webpack-config/commit/68a2f4d8bf00f169ca10f6e4a82433097ba5a93f))
+
 # [1.7.0](https://github.com/ciro-maciel/webpack-config/compare/v1.6.3...v1.7.0) (2021-03-11)
 
 
