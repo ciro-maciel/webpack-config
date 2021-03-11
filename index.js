@@ -3,12 +3,12 @@ const webpack = require("webpack");
 const Dotenv = require("dotenv-webpack");
 const { merge } = require("webpack-merge");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ProgressBarPlugin = require("progress-bar-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
-
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const CompressionPlugin = require("compression-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
 const baseConfig = (dirPath) => ({
@@ -22,7 +22,6 @@ const baseConfig = (dirPath) => ({
   },
   performance: { hints: false },
   optimization: {
-    sideEffects: true,
     // https://webpack.js.org/plugins/split-chunks-plugin/
     splitChunks: {
       chunks: "all",
@@ -118,6 +117,10 @@ const prodConfig = (dirPath) => ({
   mode: "production",
   output: {
     publicPath: "assets/",
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [new CssMinimizerPlugin({ parallel: 4 })],
   },
   plugins: [
     new FaviconsWebpackPlugin({
