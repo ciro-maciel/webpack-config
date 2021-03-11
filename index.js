@@ -73,11 +73,11 @@ const baseConfig = (dirPath) => ({
       },
       {
         test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
-        type: "asset/inline",
-        // type: "asset/resource",
-        // generator: {
-        //   filename: "font/[hash][ext][query]",
-        // },
+        // type: "asset/inline",
+        type: "asset/resource",
+        generator: {
+          filename: "font/[hash][ext][query]",
+        },
       },
       {
         test: /\.(jp(e*)g|svg)$/,
