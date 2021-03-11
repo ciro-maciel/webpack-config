@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/ciro-maciel/webpack-config/compare/v1.7.1...v1.8.0) (2021-03-11)
+
+
+### Features
+
+* TerserPlugin ([7c8807f](https://github.com/ciro-maciel/webpack-config/commit/7c8807f0848565c75b245eb46e7fff44fa7f1a38))
+
 ## [1.7.1](https://github.com/ciro-maciel/webpack-config/compare/v1.7.0...v1.7.1) (2021-03-11)
 
 
