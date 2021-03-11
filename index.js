@@ -74,6 +74,10 @@ const baseConfig = (dirPath) => ({
       {
         test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
         type: "asset/inline",
+        // type: "asset/resource",
+        // generator: {
+        //   filename: "font/[hash][ext][query]",
+        // },
       },
       {
         test: /\.(jp(e*)g|svg)$/,
@@ -113,7 +117,7 @@ const baseConfig = (dirPath) => ({
 const prodConfig = (dirPath) => ({
   mode: "production",
   output: {
-    publicPath: "assets/js/",
+    publicPath: "assets/",
   },
   plugins: [
     new FaviconsWebpackPlugin({
