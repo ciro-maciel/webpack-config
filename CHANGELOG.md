@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/ciro-maciel/webpack-config/compare/v1.6.3...v1.7.0) (2021-03-11)
+
+
+### Features
+
+* CssMinimizerPlugin ([dbf81fb](https://github.com/ciro-maciel/webpack-config/commit/dbf81fbb69c5d497fcd6febeaf313a225d37a6e9))
+
 ## [1.6.3](https://github.com/ciro-maciel/webpack-config/compare/v1.6.2...v1.6.3) (2021-03-11)
 
 
