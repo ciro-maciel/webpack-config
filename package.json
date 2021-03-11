@@ -6,11 +6,12 @@
   "license": "CC-BY-NC-SA-4.0",
   "repository": "https://github.com/ciro-maciel/webpack-config.git",
   "keywords": [
-    "utility",
-    "react",
-    "internalization",
-    "i18n",
-    "ciro-maciel"
+    "ciro-maciel",
+    "webpack",
+    "webpack5",
+    "webpack-plugin",
+    "webpack-configuration",
+    "react"
   ],
   "private": false,
   "main": "main.js",
