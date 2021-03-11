@@ -2,6 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 const Dotenv = require("dotenv-webpack");
 const { merge } = require("webpack-merge");
+const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
@@ -126,7 +127,13 @@ const prodConfig = (dirPath) => ({
   },
   optimization: {
     minimize: true,
-    minimizer: [new CssMinimizerPlugin({ parallel: 4, sourceMap: false })],
+    minimizer: [
+      new TerserPlugin({
+        parallel: 4,
+        sourceMap: false,
+      }),
+      new CssMinimizerPlugin({ parallel: 4, sourceMap: false }),
+    ],
   },
   plugins: [
     new FaviconsWebpackPlugin({
