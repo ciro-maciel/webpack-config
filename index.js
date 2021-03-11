@@ -49,6 +49,12 @@ const baseConfig = (dirPath) => ({
         options: {
           babelrc: false,
           presets: ["@babel/preset-env", "@babel/preset-react"],
+          plugins: [
+            [
+              "import",
+              { libraryName: "antd", libraryDirectory: "es", style: true },
+            ],
+          ],
         },
       },
       {
@@ -120,7 +126,7 @@ const prodConfig = (dirPath) => ({
   },
   optimization: {
     minimize: true,
-    minimizer: [new CssMinimizerPlugin({ parallel: 4 })],
+    minimizer: [new CssMinimizerPlugin({ parallel: 4, sourceMap: false })],
   },
   plugins: [
     new FaviconsWebpackPlugin({
