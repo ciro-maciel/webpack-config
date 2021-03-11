@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/ciro-maciel/webpack-config/compare/v1.6.1...v1.6.2) (2021-03-11)
+
+
+### Bug Fixes
+
+* publicPath ([61c2a27](https://github.com/ciro-maciel/webpack-config/commit/61c2a27f2f152dc4dc0d4ef9c5448f647b230ebe))
+
 ## [1.6.1](https://github.com/ciro-maciel/webpack-config/compare/v1.6.0...v1.6.1) (2021-03-11)
 
 
