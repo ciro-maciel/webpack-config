@@ -173,11 +173,12 @@ const prodConfig = (dirPath) => ({
       },
     }),
     new WorkboxPlugin.GenerateSW({
+      swDest: "../worker.js",
       clientsClaim: true,
       skipWaiting: true,
-      modifyURLPrefix: {
-        "assets/": "",
-      },
+      // modifyURLPrefix: {
+      //   "assets/": "",
+      // },
     }),
     new Dotenv({
       path: path.join(dirPath, `/.env.prod`),
