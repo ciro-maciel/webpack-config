@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/ciro-maciel/webpack-config/compare/v1.8.1...v1.9.0) (2021-03-12)
+
+
+### Features
+
+* markdown-loader ([7a3d06d](https://github.com/ciro-maciel/webpack-config/commit/7a3d06da9956d242670f98599f6997696207b9be))
+
 ## [1.8.1](https://github.com/ciro-maciel/webpack-config/compare/v1.8.0...v1.8.1) (2021-03-11)
 
 
