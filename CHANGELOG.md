@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/ciro-maciel/webpack-config/compare/v1.10.0...v1.10.1) (2021-03-12)
+
+
+### Bug Fixes
+
+* modifyURLPrefix ([545ce46](https://github.com/ciro-maciel/webpack-config/commit/545ce46548df014612f2805d506bbf9e002b134c))
+
 # [1.10.0](https://github.com/ciro-maciel/webpack-config/compare/v1.9.1...v1.10.0) (2021-03-12)
 
 
