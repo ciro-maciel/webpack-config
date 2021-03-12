@@ -156,7 +156,11 @@ const prodConfig = (dirPath) => ({
     }),
     new CleanWebpackPlugin({
       verbose: true,
-      cleanOnceBeforeBuildPatterns: [path.join(dirPath, "../www/assets/**/*")],
+      cleanOnceBeforeBuildPatterns: [
+        path.join(dirPath, "../www/assets/**/*"),
+        path.join(dirPath, "../www/worker.js"),
+        path.join(dirPath, "../www/workbox-*"),
+      ],
     }),
     new HtmlWebpackPlugin({
       template: "src/index.html",
