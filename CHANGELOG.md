@@ -1,3 +1,10 @@
+## [1.10.3](https://github.com/ciro-maciel/webpack-config/compare/v1.10.2...v1.10.3) (2021-03-12)
+
+
+### Bug Fixes
+
+* CleanWebpackPlugin ([bc5449d](https://github.com/ciro-maciel/webpack-config/commit/bc5449d7e15ebd1b2c15f43288a1bba5968faf69))
+
 ## [1.10.2](https://github.com/ciro-maciel/webpack-config/compare/v1.10.1...v1.10.2) (2021-03-12)
 
 

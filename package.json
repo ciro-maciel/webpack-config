@@ -1,6 +1,6 @@
 {
   "name": "@ciro-maciel/webpack-config",
-  "version": "1.10.2",
+  "version": "1.10.3",
   "description": "webpack configuration for development Applications",
   "homepage": "https://ciro-maciel.me/",
   "license": "CC-BY-NC-SA-4.0",
