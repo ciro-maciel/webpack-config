@@ -93,12 +93,23 @@ const baseConfig = (dirPath) => ({
         },
       },
       {
-        test: /\.(md)$/,
-        type: "asset/resource",
-        generator: {
-          filename: "[hash][ext][query]",
-        },
+        test: /\.md$/,
+        use: [
+          {
+            loader: "html-loader",
+          },
+          {
+            loader: "markdown-loader",
+          },
+        ],
       },
+      // {
+      //   test: /\.(md)$/,
+      //   type: "asset/resource",
+      //   generator: {
+      //     filename: "[hash][ext][query]",
+      //   },
+      // },
     ],
   },
   plugins: [
