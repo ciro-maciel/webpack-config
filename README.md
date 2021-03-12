@@ -6,7 +6,7 @@ This is our shared [Webpack](http://webpack.github.io) config used for front-end
 
 ### Getting Started
 
-Install this package and Webpack via NPM:
+Install this package via NPM:
 
 ```
 npm install @ciro-maciel/webpack-config --save-dev
