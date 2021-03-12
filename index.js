@@ -103,20 +103,12 @@ const baseConfig = (dirPath) => ({
           },
         ],
       },
-      // {
-      //   test: /\.(md)$/,
-      //   type: "asset/resource",
-      //   generator: {
-      //     filename: "[hash][ext][query]",
-      //   },
-      // },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: "css/[name].css",
     }),
-    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /pt-br/),
     new ProgressBarPlugin({ percentBy: "entries" }),
   ],
   // https://webpack.js.org/configuration/resolve/#resolvealias
