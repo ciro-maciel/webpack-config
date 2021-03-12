@@ -1,3 +1,10 @@
+## [1.10.2](https://github.com/ciro-maciel/webpack-config/compare/v1.10.1...v1.10.2) (2021-03-12)
+
+
+### Bug Fixes
+
+* WorkboxPlugin ([0829074](https://github.com/ciro-maciel/webpack-config/commit/0829074eae7e47f7a705699155ea855607da8e9a))
+
 ## [1.10.1](https://github.com/ciro-maciel/webpack-config/compare/v1.10.0...v1.10.1) (2021-03-12)
 
 
