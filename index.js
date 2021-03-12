@@ -3,6 +3,7 @@ const webpack = require("webpack");
 const Dotenv = require("dotenv-webpack");
 const { merge } = require("webpack-merge");
 const TerserPlugin = require("terser-webpack-plugin");
+const WorkboxPlugin = require("workbox-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -170,6 +171,10 @@ const prodConfig = (dirPath) => ({
         minifyCSS: true,
         minifyURLs: true,
       },
+    }),
+    new WorkboxPlugin.GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true,
     }),
     new Dotenv({
       path: path.join(dirPath, `/.env.prod`),
