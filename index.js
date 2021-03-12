@@ -5,7 +5,6 @@ const { merge } = require("webpack-merge");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const CompressionPlugin = require("compression-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ProgressBarPlugin = require("progress-bar-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
@@ -124,6 +123,7 @@ const baseConfig = (dirPath) => ({
 });
 
 const prodConfig = (dirPath) => ({
+  devtool: false,
   mode: "production",
   output: {
     publicPath: "assets/",
@@ -175,9 +175,6 @@ const prodConfig = (dirPath) => ({
       path: path.join(dirPath, `/.env.prod`),
       safe: true,
       systemvars: true,
-    }),
-    new CompressionPlugin({
-      test: /\.js$/,
     }),
     new BundleAnalyzerPlugin({
       analyzerMode: "static",
