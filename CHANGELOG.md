@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/ciro-maciel/webpack-config/compare/v1.9.1...v1.10.0) (2021-03-12)
+
+
+### Features
+
+* **worker:** add WorkboxPlugin ([60bbb2f](https://github.com/ciro-maciel/webpack-config/commit/60bbb2f3db9919a7e7980e830ff47809dc07e291))
+
 ## [1.9.1](https://github.com/ciro-maciel/webpack-config/compare/v1.9.0...v1.9.1) (2021-03-12)
 
 
