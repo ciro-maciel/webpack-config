@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/ciro-maciel/webpack-config/compare/v1.9.0...v1.9.1) (2021-03-12)
+
+
+### Bug Fixes
+
+* devtool ([64ad62d](https://github.com/ciro-maciel/webpack-config/commit/64ad62d216a38ccbc9eefad7f7a25e37061e6d72))
+
 # [1.9.0](https://github.com/ciro-maciel/webpack-config/compare/v1.8.1...v1.9.0) (2021-03-12)
 
 
