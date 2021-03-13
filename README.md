@@ -1,4 +1,4 @@
-## ciro-maciel - webpack-config [![deploy to Prod](https://github.com/ciro-maciel/webpack-config/actions/workflows/toProd.yml/badge.svg)](https://github.com/ciro-maciel/webpack-config/actions/workflows/toProd.yml)
+## ciro-maciel - webpack-config [![deploy to Prod](https://github.com/ciro-maciel/webpack-config/actions/workflows/toProd.yml/badge.svg)](https://github.com/ciro-maciel/webpack-config/actions/workflows/toProd.yml) ![npm](https://img.shields.io/npm/v/@ciro-maciel/webpack-config) ![NPM](https://img.shields.io/npm/l/@ciro-maciel/webpack-config)
 
 webpack configuration for development Applications
 
@@ -43,7 +43,7 @@ module.exports = configure({
 
 Now you can run `npm start` to build with source maps and watch for changes, and `npm run build` to build optimized assets for production! If you need to further customize your build, you can pass any overrides in to the configure function.
 
-![base project performance](https://github.com/ciro-maciel/webpack-config/blob/main/docs/Screen%20Shot%202021-03-11%20at%2011.03.30%402x.jpg)
+![base project performance](https://github.com/ciro-maciel/webpack-config/blob/main/docs/Screen%20Shot%202021-03-13%20at%2007.52.22%402x.jpg)
 
 ### License
 
