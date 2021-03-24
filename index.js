@@ -239,7 +239,6 @@ const devConfig = (dirPath) => ({
     }),
   ],
   devServer: {
-    contentBase: path.join(dirPath, "../../../www/"),
     index: "index.html",
     compress: true,
     open: true,
